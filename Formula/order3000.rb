@@ -4,11 +4,11 @@
 # This is a TEMPLATE. The five `__…__` tokens below are substituted by
 # `apps/order3000-cli/scripts/release.sh` on every release:
 #
-#   0.4.0              ← `version` field of apps/order3000-cli/package.json
-#   1e66b8f5170a0b1bc75ba01696c28e503d5def53aed8fba1f7485c40bd3d3a8c     ← sha256 of order3000-darwin-arm64.tar.gz
-#   63325b56a977d37bf7288a20a25ccc9eebf3a203be60bf0702612e7dc7be4207       ← sha256 of order3000-darwin-x64.tar.gz
-#   bf5eb897f685f6ac94ab134ff05ea712001733d0c4b888484c9b25b2780cc278      ← sha256 of order3000-linux-arm64.tar.gz
-#   d974a1a5ba48ec7b49ac0f51b95005e347eed04bf81cb93a5133a70a281c2d00        ← sha256 of order3000-linux-x64.tar.gz
+#   0.5.0              ← `version` field of apps/order3000-cli/package.json
+#   a36ab9d185f3072134e243a986784e60b23c8df7fb9a9f72e9211960afc69e67     ← sha256 of order3000-darwin-arm64.tar.gz
+#   777f36951adb16bb50770da3af2417e9ce1652f223e7c916fd32d6b4a8e10c9e       ← sha256 of order3000-darwin-x64.tar.gz
+#   b3f571c9b6913e5d0e74bdc4a90209bde5da3ee9d233e097c9db28d19a237891      ← sha256 of order3000-linux-arm64.tar.gz
+#   c3103684d15de383e41a6e248c3488a5e8344f9e409a75dfc78c7cc3d6c8f380        ← sha256 of order3000-linux-x64.tar.gz
 #
 # The substituted file is committed to `github.com/order3000/homebrew-tap`.
 # Hand-edits to this template are overwritten on every release; the
@@ -16,28 +16,28 @@
 class Order3000 < Formula
   desc "Agent-friendly command-line interface for the order3000 platform"
   homepage "https://github.com/order3000/cli"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/order3000/cli/releases/download/v#{version}/order3000-darwin-arm64.tar.gz"
-      sha256 "1e66b8f5170a0b1bc75ba01696c28e503d5def53aed8fba1f7485c40bd3d3a8c"
+      sha256 "a36ab9d185f3072134e243a986784e60b23c8df7fb9a9f72e9211960afc69e67"
     end
     on_intel do
       url "https://github.com/order3000/cli/releases/download/v#{version}/order3000-darwin-x64.tar.gz"
-      sha256 "63325b56a977d37bf7288a20a25ccc9eebf3a203be60bf0702612e7dc7be4207"
+      sha256 "777f36951adb16bb50770da3af2417e9ce1652f223e7c916fd32d6b4a8e10c9e"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/order3000/cli/releases/download/v#{version}/order3000-linux-arm64.tar.gz"
-      sha256 "bf5eb897f685f6ac94ab134ff05ea712001733d0c4b888484c9b25b2780cc278"
+      sha256 "b3f571c9b6913e5d0e74bdc4a90209bde5da3ee9d233e097c9db28d19a237891"
     end
     on_intel do
       url "https://github.com/order3000/cli/releases/download/v#{version}/order3000-linux-x64.tar.gz"
-      sha256 "d974a1a5ba48ec7b49ac0f51b95005e347eed04bf81cb93a5133a70a281c2d00"
+      sha256 "c3103684d15de383e41a6e248c3488a5e8344f9e409a75dfc78c7cc3d6c8f380"
     end
   end
 
