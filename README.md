@@ -15,7 +15,7 @@ To upgrade later: `brew upgrade order3000`.
 ## What lives here
 
 This repository hosts only the Homebrew formula. It is published from
-the kadal monorepo (`apps/order3000-cli/homebrew/order3000.rb` template)
+the kadal monorepo (`apps/order3000/cli/homebrew/order3000.rb` template)
 on every CLI release. The actual binaries are attached to GitHub
 Releases on [`order3000/cli`](https://github.com/order3000/cli/releases).
 
